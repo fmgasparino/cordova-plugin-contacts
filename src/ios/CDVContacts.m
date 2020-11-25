@@ -477,6 +477,12 @@
 
             if (result) {
                 [weakSelf.commandDelegate sendPluginResult:result callbackId:callbackId];
+                UIAlertView *alertMessage = [[UIAlertView alloc] initWithTitle:@"Profile Saved"
+                       message:@"This Profile has been saved to the Contacts app on your phone"
+                       delegate:nil
+                       cancelButtonTitle:@"OK"
+                       otherButtonTitles:nil];
+                [alertMessage show];
             }
         }];
     }];     // end of  queue
